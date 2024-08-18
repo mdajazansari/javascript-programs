@@ -8,9 +8,39 @@
 // Print "You can drive" or "You cannot drive" based on age being greater than 18 using ternary 
 
 
+const percentage = prompt("Enter your percentage that you scrored in class 10th:");
 
+if (percentage > 100 || percentage == ""){
+    console.log("Enter a number in the range of 0 to 100.");
+}
+else {
+let grade;
 
+switch(true){
+    case (percentage >= 90):
+        grade = "A";
+        break;
+    
+    case (percentage >= 75):
+        grade = "B";
+        break;
+    
+    case (percentage >= 65):
+        grade = "C";
+        break;
 
+    case (percentage >= 55):
+        grade = "D";
+        break;
 
+    case (percentage >= 33):
+        grade = "E";
+        break;
+    
+    default:
+        grade = "Fail";
+        break;
+}
 
-
+console.log("Grade", grade);
+}
